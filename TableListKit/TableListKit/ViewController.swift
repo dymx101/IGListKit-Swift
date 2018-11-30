@@ -24,11 +24,11 @@ class ViewController: UIViewController, TableAdapterDataSource {
         adapter.dataSource = self
     }
 
-    func objects(for tableViewAdapter: TableAdapter) -> [Any] {
-        return ["1", "", "3"]
+    func objects(for tableViewAdapter: TableAdapter) -> [NSObject] {
+        return ["1" as NSString, "" as NSString, "3" as NSString]
     }
     
-    func tableAapter(_ tableAdapter: TableAdapter, sectionControllerFor object: Any) -> TableSectionControllerProtocol {
+    func tableAapter(_ tableAdapter: TableAdapter, sectionControllerFor object: NSObject) -> TableSectionController {
         if let object = object as? String {
             if object.isEmpty {
                 return EmptySectionController()

@@ -8,19 +8,19 @@
 
 import UIKit
 
-class TextSectionController: TableSectionControllerProtocol {
+class TextSectionController: TableSectionController {
     var model: String?
-    func cellForItem(at index: Int) -> UITableViewCell {
+    override func cellForItem(at index: Int) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = model
         return cell
     }
     
-    func didUpdate(to object: Any) {
+    override func didUpdate(to object: NSObject) {
         model = (object as! String)
     }
     
-    func didSelectItem(at index: Int) {
+    override func didSelectItem(at index: Int) {
         print("selected: \(model ?? "N/A")")
     }
 }

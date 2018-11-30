@@ -9,6 +9,6 @@
 import Foundation
 
 protocol TableAdapterDataSource: class {
-    func objects(for tableViewAdapter: TableAdapter) -> [Any]
-    func tableAapter(_ tableAdapter: TableAdapter, sectionControllerFor object: Any) -> TableSectionControllerProtocol
+    func objects(for tableViewAdapter: TableAdapter) -> [NSObject]
+    func tableAapter(_ tableAdapter: TableAdapter, sectionControllerFor object: NSObject) -> TableSectionController
 }
